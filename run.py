@@ -99,3 +99,10 @@ def player_turn(hit_ship_player, miss_ship_player, boat_player):
         else:
             break
     return player_hit
+
+
+def computer_guess(computer_poss_guesses):
+    """Function to get computer's guess from the available list."""
+    computer_hit = random.choice(computer_poss_guesses)
+    computer_poss_guesses.remove(computer_hit)
+    return computer_hit
