@@ -148,18 +148,18 @@ The only errors that came back were saying that certain lines were too long, but
 GitHub Pages
 The project was deployed to GitHub Pages using the following steps:
 
-Log in to GitHub and access the [GitHub Repository](https://github.com/Connall1234/ci-project-three-for-submission.git).
+Log in to GitHub and access the [GitHub Repository](https://github.com/Connall1234/codeiproject3final.git).
 Go to Settings > GitHub Pages > Source > Select "Master Branch."
 The published site can be accessed [Here](https://connall-battleship-38f220f5a45e.herokuapp.com/)
 Forking the GitHub Repository
 Forking the repository creates a copy on your GitHub account for viewing and/or making changes without affecting the original repository. Follow these steps:
 
-Access the [GitHub Repository](https://github.com/Connall1234/ci-project-three-for-submission.git).
+Access the [GitHub Repository](https://github.com/Connall1234/codeiproject3final.git).
 Click "Fork" at the top right of the repository.
 Making a Local Clone
 To clone the repository locally, follow these steps:
 
-Access the [GitHub Repository](https://github.com/Connall1234/ci-project-three-for-submission.git).
+Access the [GitHub Repository](https://github.com/Connall1234/codeiproject3final.git).
 Click "Clone or download" and copy the URL under "Clone with HTTPS."
 Open Git Bash and navigate to the desired directory.
 Enter git clone followed by the copied URL.
