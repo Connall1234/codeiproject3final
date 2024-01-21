@@ -64,3 +64,26 @@ def print_boats(boat):
     random_numbers = random.sample(range(0, 24), 6)
     boat.extend(random_numbers)
     return boat
+
+
+def get_hit(hit_ship_player, miss_ship_player, boat_player):
+    """Function to get player's hit position with input validation."""
+    while True:
+        try:
+            column_select = int(input("\nPlease select a column? "))
+            if column_select in range(0, 5):
+                break
+            else:
+                print("\nThat's off the board!")
+        except ValueError as e:
+            print("\nPssst, it's meant to be a number!")
+    while True:
+        try:
+            row_select = int(input("\nPlease select a row? "))
+            if row_select in range(0, 5):
+                break
+            else:
+                print("\nThat's off the board!")
+        except ValueError as e:
+            print("\nHey now, it's meant to be a number!")
+    return (column_select * 5) + row_select
