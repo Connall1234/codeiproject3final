@@ -74,6 +74,44 @@ I have manually tested this project by:
 2. Implemented validation for inputs when it comes to wrong inputs (like numbers off the board or too many characters).
 3. Tested the logic in the Code Institute terminal.
 
+## Testing Procedures
+
+### Manual Testing
+
+The Python Essentials application underwent thorough manual testing to ensure the reliability and functionality of key features. The following tests were conducted:
+
+1. **User Input Validation:**
+   - Tested the application's response to various user inputs, including invalid characters, incorrect lengths, and out-of-range values.
+   - Outcome: The application correctly validates user inputs and provides appropriate error messages.
+
+2. **Game Logic and Board Updates:**
+   - Played multiple rounds of the game to verify that the game logic is functioning correctly.
+   - Checked that the game board updates accurately after player and computer moves.
+   - Outcome: The game logic and board updates are consistent, providing an accurate representation of hits, misses, and ship locations.
+
+3. **End Game Conditions:**
+   - Tested scenarios where either the player or the computer wins, loses, or the game ends in a draw.
+   - Checked if the application correctly identifies and displays the game outcome.
+   - Outcome: The application accurately determines the game result based on ship statuses and turn limits.
+
+4. **Replay Functionality:**
+   - Tested the "Play Again" option to ensure the game resets appropriately for a new round.
+   - Checked if the application handles subsequent games without issues.
+   - Outcome: The replay functionality works as expected, allowing for multiple game sessions.
+
+### Continuous Integration (CI) Testing
+
+Continuous Integration using GitHub Actions was implemented to automate certain aspects of testing, using tools like PEP8.
+
+### User Experience (UX) Testing
+
+Collected feedback from potential users to evaluate the overall user experience, including clarity of instructions, ease of gameplay, and visual presentation.
+
+---
+
+These testing procedures aim to validate the robustness of the application and ensure a positive user experience. Any identified issues were addressed to enhance the reliability and functionality of the Python Essentials game.
+
+
 ### Stories from user experience testing
 
 
