@@ -148,3 +148,20 @@ def print_hits(result, miss, hit, player):
         print(f"\n{player} guessed {result}, it was a hit!")
     elif result in miss:
         print(f"\n{player} guessed {result}, it was a miss")
+
+
+def print_instruction():
+    """Function to print game instructions at the start."""
+    print("\nWelcome to the Battleship Game!")
+    print("You will play against the computer. Here are the rules:")
+    print("1. You and the computer each have a fleet of ships, five each!.")
+    print("2. Your goal is to sink all of the computer's ships before yours are sunk.")
+    print("3. The game is played on a 5x5 board.")
+    print("4. Ships are represented by '@'. Misses are marked with 'x', and hits are marked with 'o'.")
+    print("You each have five ships!")
+    print("The coordinates start from 0 and go up to 4, so make sure you stay within these numbers!")
+    print("5. You and the computer will take turns guessing the coordinates to attack.")
+    print("6. Enter row and column numbers when prompted to make a guess.")
+    print("7. The game ends when either all your ships or the computer's ships are sunk, or a draw!.")
+    print("8. You have 10 turns to defeat the computer. Use them wisely!")
+    print("\nNow we've got that out of the way, ships ahoy!\n")
