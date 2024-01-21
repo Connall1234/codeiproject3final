@@ -124,3 +124,19 @@ def check_comp(miss, hit, boat, result):
         hit.append(result)
     else:
         miss.append(result)
+
+
+def check_winner(boat_player, boat_computer):
+    """Function to check for the winner or draw."""
+    if len(boat_computer) == 0 and len(boat_player) == 0:
+        print("\nAll ships are down, it's a tie! ")
+
+        return True
+    elif len(boat_computer) == 0:
+        print("\nComputer ships are down, you win! ")
+        return True
+    elif len(boat_player) == 0:
+        print("\nYour ships are down, computer wins! ")
+        return True
+    else:
+        return
