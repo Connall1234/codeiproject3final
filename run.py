@@ -106,3 +106,21 @@ def computer_guess(computer_poss_guesses):
     computer_hit = random.choice(computer_poss_guesses)
     computer_poss_guesses.remove(computer_hit)
     return computer_hit
+
+
+def check(miss, hit, boat, result):
+    """Function to check if the guess hit or miss."""
+    if result in boat:
+        boat.remove(result)
+        hit.append(result)
+    else:
+        miss.append(result)
+
+
+def check_comp(miss, hit, boat, result):
+    """Function to check computer's guess and update lists accordingly."""
+    if result in boat:
+        boat.remove(result)
+        hit.append(result)
+    else:
+        miss.append(result)
