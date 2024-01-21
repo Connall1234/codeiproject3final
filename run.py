@@ -165,3 +165,71 @@ def print_instruction():
     print("7. The game ends when either all your ships or the computer's ships are sunk, or a draw!.")
     print("8. You have 10 turns to defeat the computer. Use them wisely!")
     print("\nNow we've got that out of the way, ships ahoy!\n")
+
+
+def main():
+    """Main function to run the game."""
+    global miss_ship_player, hit_ship_player, boat_player, miss_ship_computer, hit_ship_computer, boat_computer, computer_poss_guesses
+    print_instruction()
+    turns = 10
+    player_name = get_player_name()
+    game_board = Board(5, "Computer", "Type A")
+    player_print_boats = print_boats(boat_computer)
+    game_board.print_board(miss_ship_player, hit_ship_player, boat_player)
+    comp = Board(5, player_name, "Type B")
+    computer_print_boats = print_boats(boat_player)
+    comp.print_board(miss_ship_computer, hit_ship_computer, boat_computer)
+    """Using for loop to give game turns"""
+    for x in range(0, 10):
+        turns -= 1
+        result = player_turn(miss_ship_computer, hit_ship_computer, boat_computer)
+        result_computer = computer_guess(computer_poss_guesses)
+        check(miss_ship_computer, hit_ship_computer, boat_computer, result)
+        check_comp(miss_ship_player, hit_ship_player, boat_player, result_computer)
+        game_board.print_board(miss_ship_player, hit_ship_player, boat_player)
+        comp.print_board(miss_ship_computer, hit_ship_computer, boat_computer)
+        print(f"\nTurns: {turns}")
+        print_hits(result, miss_ship_computer, hit_ship_computer, player_name)
+        print_hits(result_computer, miss_ship_player, hit_ship_player, "Computer")
+        """Using if statement to check winner"""
+        if check_winner(boat_player, boat_computer):
+            """While loop for input validation"""
+            while True:
+                try:
+                    """Option to play again"""
+                    play_again = input("\nThat's the game! Would you like to play again?\nHit y to play again, or n to quit! ")
+                    if play_again == "y":
+                        miss_ship_player = []
+                        hit_ship_player = []
+                        boat_player = []
+                        miss_ship_computer = []
+                        hit_ship_computer = []
+                        boat_computer = []
+                        computer_poss_guesses = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+                        main()
+                    elif play_again == "n":
+                        print("Goodbye! ")
+                        return False
+                except ValueError:
+                    print("Please enter a valid choice! ")
+        """If game ends in draw"""
+        if turns == 0:
+            while True:
+                try:
+                    play_again = input("\nThat's the game, shame it ended in a draw, why don't you play again!\nHit y to play again, or n to quit! ")
+                    if play_again == "y":
+                        miss_ship_player = []
+                        hit_ship_player = []
+                        boat_player = []
+                        miss_ship_computer = []
+                        hit_ship_computer = []
+                        boat_computer = []
+                        computer_poss_guesses = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+                        main()
+                    elif play_again == "n":
+                        print("Goodbye! ")
+                        return False
+                except ValueError:
+                    print("Please enter a valid choice! ")
+
+main()
